@@ -1,0 +1,369 @@
+// $navcolor: #A3D5FF;
+$navcolor: white;
+// $navFontColor: white;
+$navFontColor: #1a2a60;
+$font_secondary_li: 1rem;
+$font: 'Roboto', sans-serif;
+$font_primary: 2rem;
+$font_secondary: 1.5rem;
+$font_third: 1rem;
+$textFont: 'Quicksand', sans-serif;
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font;
+  overflow-x: hidden;
+}
+
+nav {
+  display: grid;
+  // TODO: MAKE NAVBAR STICKY
+  // position: sticky;
+  // top: 0;
+  // width: 100%;
+  /* display: flex; */
+  grid-template-areas: ". a  . . b c ";
+  /* distributes space evently */
+  /* justify-content: space-around; */
+  align-items: center;
+  min-height: 8vh;
+  background-color: $navcolor;
+  
+}
+
+.logo {
+  grid-area: a;
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+}
+
+.img_logo{
+    grid-area: a;
+    height: 8vh;
+    margin-left: 4rem;
+    // padding: 1rem;
+}
+
+.logo .title{
+  text-transform: uppercase;
+}
+
+.title_nutriendo{
+  color: $navFontColor;
+}
+
+.title_habitos{
+  color: rgb(50, 116, 186);
+//   color: #3274ba;
+}
+
+
+
+.nav-links {
+  grid-area: b;
+  display: flex;
+  justify-content: space-around;
+  
+  /* width: 30%; */
+}
+
+.nav-links li {
+  list-style: none;
+  transition: all 1s ease-in;
+  text-transform: uppercase;
+//   padding: 5rem;
+//   border: 1px solid black;
+  
+}
+
+.nav-links li :hover{
+
+    color: red;
+    
+}
+
+.nav-links a {
+  color: $navFontColor;
+  text-decoration: none;
+  letter-spacing: 0.1rem;
+  // font-weight: bold;
+  font-size: $font_secondary_li;
+  
+}
+
+.burger div {
+  width: 25px;
+  height: 2px;
+  background-color: $navFontColor;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.burger {
+    display: none;
+  /* opacity: 0; */
+  grid-area: c;
+//   display: grid;
+  justify-content: flex-end; 
+}
+
+
+
+
+
+
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+// Content 
+
+// Hero
+
+.hero{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  justify-content: center;
+  align-items: center;
+ 
+  height: 92vh;
+  width: 100%;
+  background-image: url('/images/diabetic-background.jpg');
+  // background-image: url('/images/light\ blue\ paper\ strip.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.text_hero{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: $textFont;
+  color: white;
+  font-size: 3rem;
+}
+
+// HAPPY MAN SECTION
+
+// .section_white{
+//   padding: 5rem;
+//   height: 70vh;
+//   display: grid;
+//   grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+//   align-items: center;
+//   justify-content: space-around;
+  
+//   background-image: url('/images/Untitled\ design.png');
+//    background-repeat: no-repeat;
+//   background-size: cover;
+//   background-position: center;
+//   background-attachment: fixed;
+// }
+
+.right_div{
+  // padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 5rem 0 5rem;
+}
+
+.right_div div{
+  font-family: $textFont;
+  // padding-left: 5rem;
+  text-align: center;
+}
+
+.right_big{
+  font-size: $font_primary;
+  // margin: $font_primary;
+  // margin-top: $font_primary;
+  margin-bottom: 2rem;
+
+}
+.right_medium{
+  font-size: $font_secondary;
+  margin-bottom: 2rem;
+}
+.right_small{
+  font-size: $font_third;
+  line-height: 2rem;
+  // margin-bottom: 3rem;
+}
+
+.left_div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left_div img{
+  padding: 5rem;
+}
+
+// FRUIT BACKGROUND
+
+.healthy_bk{
+  height: 60vh;
+  background-image: url('/images/diabetes-bk2.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+  // background-size: cover;
+  background-position: center;
+  // background-attachment: fixed;
+  // background-attachment: fixed;
+}
+
+// ABOUT US SECTION
+
+.section_white{
+  // padding: 5rem;
+  height: 70vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  align-items: center;
+  justify-content: space-around;
+  
+  // background-image: url('/images/Untitled\ design.png');
+  //  background-repeat: no-repeat;
+  // background-size: cover;
+  // background-position: center;
+  background-attachment: fixed;
+}
+.section_white_about{
+  // padding: 5rem;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  align-items: center;
+  justify-content: space-around;
+  
+  // background-image: url('/images/Untitled\ design.png');
+  //  background-repeat: no-repeat;
+  // background-size: cover;
+  // background-position: center;
+  background-attachment: fixed;
+}
+
+.about_left_div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 5rem 0 5rem;
+}
+
+.about_left_div div{
+  font-family: $textFont;
+  // padding-left: 5rem;
+  text-align: center;
+}
+
+.about_left_big{
+  font-size: $font_primary;
+  // margin: $font_primary;
+  margin-top: $font_primary;
+  margin-bottom: 2rem;
+
+}
+.about_left_medium{
+  font-size: $font_secondary;
+  margin-bottom: 2rem;
+}
+.about_left_small{
+  font-size: $font_third;
+  line-height: 2rem;
+}
+
+.about_right_div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about_right_div img{
+  padding: 5rem;
+  max-width: 80%;
+  object-fit: cover;
+  // height: 600px;
+  // width: 461;
+}
+
+
+/* Cell phone friendly */
+@media screen and (max-width: 1000px) {
+  /* hides overlapping things */
+  body {
+    // overflow: hidden;
+    overflow-x: hidden;
+  }
+
+  .nav-links {
+    position: absolute;
+    width: 100%;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: $navcolor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* moves the column out of the screen */
+    transform: translateX(100%);
+    transition: transfor, 0.2s ease-in;
+  }
+  .nav-links a {
+    font-size: $font_secondary_li;
+    padding: 5rem;
+  }
+  .nav-links li {
+    /* we cannot see */
+    opacity: 0;
+    transition: all 1s ease-in;
+  }
+  .burger {
+    display: block;
+  }
+  .section_white{
+    height: auto;
+  }
+  .about_left_div{
+    margin: 0;
+  }
+  .right_div{
+    margin: 0;
+  }
+  .right_big{
+    margin-top: $font_primary;
+  }
+  
+  
+
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
