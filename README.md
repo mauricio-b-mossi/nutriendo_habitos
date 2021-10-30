@@ -1,2 +1,2 @@
 # nutriendo_habitos
-Building website
+Nutriendo Habitos initial mock up.
